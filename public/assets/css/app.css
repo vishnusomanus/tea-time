@@ -1,7 +1,9 @@
 /* Custom page CSS
 -------------------------------------------------- */
 /* Not required for template or sticky footer method. */
-
+body{
+  background-color: #f2f3f7;
+}
 main > .container {
   padding: 60px 15px 0;
 }
@@ -37,4 +39,64 @@ main > .container {
 
 .dropdown-toggle {
   outline: 0;
+}
+.card-wrapper {
+  overflow: visible;
+  align-items: center;
+  padding: 3rem 1rem;
+  border-radius: 3rem;
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
+  transition: all 0.3s;
+  margin-bottom: 2rem;
+}
+.card-wrapper:hover {
+  background: #f8f9fb;
+}
+.btn.btn-primary.mb-3 {
+  background-color: #35b8fc !important;
+  border-color: #35b8fc !important;
+  color: #ffffff !important;
+  border-radius: 100px;
+  padding: 1rem 2.6rem;
+} 
+.kadi_kudi {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+input[type="radio"]:checked+label::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 7px solid #35b8fc;
+  border-radius: 3rem;
+}
+input[type="radio"]:checked+label {
+}
+
+.items_each {
+  position: relative;
+  overflow: visible;
+  align-items: center;
+  padding: 10px;
+  border-radius: 3rem;
+  box-shadow: 0.6em 0.6em 1.2em #d2dce9, -0.5em -0.5em 1em #ffffff;
+  transition: all 0.3s;
+  margin-bottom: 2rem;
+  text-align: center;
+  min-width: 200px;
+  margin-left: 5px;
+  margin-right: 5px
+}
+.items_each input {
+  position: absolute;
+  width: 0;
+}
+img.item_image {
+  border-radius: 50%;
+  max-width: 100px;
 }

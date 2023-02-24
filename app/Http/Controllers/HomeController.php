@@ -16,13 +16,13 @@ class HomeController extends Controller
                 ->join('users', 'users.id', '=', 'menu_today.user')
                 ->whereDate('menu_today.created_at', today())
                 ->where('menu.type', "kadi")
-                ->select('menu.name as item', 'users.name')
+                ->select('menu.name as item', 'menu.image','users.name')
                 ->get();
                 $menuTodayKudi = MenuToday::join('menu', 'menu.id', '=', 'menu_today.kadi_kudi')
                 ->join('users', 'users.id', '=', 'menu_today.user')
                 ->whereDate('menu_today.created_at', today())
                 ->where('menu.type', "kudi")
-                ->select('menu.name as item', 'users.name')
+                ->select('menu.name as item', 'menu.image','users.name')
                 ->get();
 
                 $menuTodayTotals = MenuToday::join('menu', 'menu.id', '=', 'menu_today.kadi_kudi')

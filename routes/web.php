@@ -18,27 +18,28 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     /**
      * Home Routes
      */
-    Route::get('/', 'HomeController@index')->name('home.index');
-
+    Route::get('/', 'LoginController@show')->name('login.show');
+    
+    
     Route::group(['middleware' => ['guest']], function() {
         /**
          * Register Routes
          */
         Route::get('/register', 'RegisterController@show')->name('register.show');
         Route::post('/register', 'RegisterController@register')->name('register.perform');
-
+        
         /**
          * Login Routes
          */
         Route::get('/login', 'LoginController@show')->name('login.show');
         Route::post('/login', 'LoginController@login')->name('login.perform');
-
-
+        
+        
         Route::get('/login/google', 'GoogleLoginController@redirect')->name('login.google-redirect');
         Route::get('/login/google/callback', 'GoogleLoginController@callback')->name('login.google-callback');
-
+        
     });
-
+    
     Route::group(['middleware' => ['auth']], function() {
         /**
          * Logout Routes
@@ -47,5 +48,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::get('/mymenu', 'MenuTodayController@create')->name('mymenu.form');
         Route::post('/mymenusubmit', 'MenuTodayController@store')->name('mymenu.post');
         Route::PUT('/mymenuupdate', 'MenuTodayController@update')->name('mymenu.update');
+        Route::get('/home', 'HomeController@index')->name('home.index');
     });
 });
