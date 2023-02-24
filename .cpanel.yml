@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/vishnusoman/public_html/tea-time
+    - /bin/cp * $DEPLOYPATH
