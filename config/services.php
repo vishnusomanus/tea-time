@@ -33,7 +33,8 @@ return [
     'google' => [
         'client_id' => env('GOOGLE_CLIENT_ID'),
         'client_secret' => env('GOOGLE_CLIENT_SECRET'),
-        'redirect' => 'https://vishnusoman.com/ttime/public/login/google/callback',
+        'redirect' => env('GOOGLE_REDIRECT'),
+        //'redirect' => 'https://vishnusoman.com/ttime/public/login/google/callback',
     ],
 
 ];
