@@ -1,7 +1,7 @@
 @extends('layouts.app-master')
 
 @section('content')
-    <div class="p-5 rounded">
+    <div class="pt-5 pb-5 rounded">
         @auth
         <div class="text-center">
             <a href="{{URL::to('/mymenu')}}" class="btn btn-primary mb-3">Create My Menu</a>
