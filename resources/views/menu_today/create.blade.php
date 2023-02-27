@@ -1,7 +1,7 @@
 @extends('layouts.app-master')
 
 @section('content')
-    <div class="bg-light p-5 rounded">
+    <div class="bg-light pt-5 pb-5 rounded">
         @auth
         <div class="text-center">
             <a href="{{URL::to('/')}}" class="btn btn-primary mb-3">Today's Menu</a>
