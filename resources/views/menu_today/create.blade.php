@@ -4,7 +4,7 @@
     <div class="bg-light p-5 rounded">
         @auth
         <div class="text-center">
-            <a href="{{URL::to('/home')}}" class="btn btn-primary mb-3">Today's Menu</a>
+            <a href="{{URL::to('/')}}" class="btn btn-primary mb-3">Today's Menu</a>
         </div>
         @if ($edit)
             <form action="{{ route('mymenu.update') }}" method="POST">

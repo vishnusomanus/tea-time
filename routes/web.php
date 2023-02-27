@@ -18,7 +18,8 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
     /**
      * Home Routes
      */
-    Route::get('/', 'LoginController@show')->name('login.show');
+    // Route::get('/', 'LoginController@show')->name('login.show');
+    // Route::get('/', 'HomeController@show');
     
     
     Route::group(['middleware' => ['guest']], function() {
@@ -48,6 +49,6 @@ Route::group(['namespace' => 'App\Http\Controllers'], function()
         Route::get('/mymenu', 'MenuTodayController@create')->name('mymenu.form');
         Route::post('/mymenusubmit', 'MenuTodayController@store')->name('mymenu.post');
         Route::PUT('/mymenuupdate', 'MenuTodayController@update')->name('mymenu.update');
-        Route::get('/home', 'HomeController@index')->name('home.index');
+        Route::get('/', 'HomeController@index')->name('home.index');
     });
 });
