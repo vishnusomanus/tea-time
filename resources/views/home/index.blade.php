@@ -40,7 +40,7 @@
                 @foreach($menuTodayKadi as $item)
                     <tr>
                     <td>{{$item['item']}}</td>
-                    <td>{{$item['name']}}</td>
+                    <td>{{$item['user_names']}}</td>
                     </tr>
                     @endforeach
                 </tbody>
@@ -59,7 +59,7 @@
                 @foreach($menuTodayKudi as $item)
                     <tr>
                     <td>{{$item['item']}}</td>
-                    <td>{{$item['name']}}</td>
+                    <td>{{$item['user_names']}}</td>
                     </tr>
                     @endforeach
                 </tbody>
